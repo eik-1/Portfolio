@@ -13,10 +13,12 @@ function Hero() {
                         text="Hi! I'm Eik"
                     />
                     <p className={styles.introduction}>
-                        Hello! I'm a passionate full-stack Web3 developer with 2
-                        years of experience in this community. I believe that
-                        Blockchain technology will lead the future. With my
-                        skills, I want to leave a positive impact on the world.
+                        Hello! I'm a passionate full-stack{" "}
+                        <span className={styles.inside}>Web3</span> developer
+                        with 2 years of experience in this community. I believe
+                        that <span className={styles.inside}>Blockchain</span>{" "}
+                        technology will lead the future. With my skills, I want
+                        to leave a positive impact on the world.
                     </p>
                 </div>
                 <div className={styles.imageContainer}>
