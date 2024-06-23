@@ -1,0 +1,47 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 7rem;  
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  }
+  
+  .logo {
+    font-family: "Space Mono", monospace;
+    font-size: 2rem;  
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .navLinks {
+    display: flex;
+    align-items: center;
+    gap: 2rem;  /* Slightly reduced gap */
+  }
+  
+  .navLink {
+    font-size: 1.5rem;  /* Reduced font size */
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+  
+  .navLink:hover {
+    color: #FFE0B5;
+  }
+  
+  .transparent {
+    background-color: transparent;
+  }
+  
+  .scrolled {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
