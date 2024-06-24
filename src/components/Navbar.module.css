@@ -12,28 +12,32 @@
   }
   
   .logo {
+    color: #ffffff;
     font-family: "Space Mono", monospace;
     font-size: 2rem;  
     font-weight: 700;
     text-decoration: none;
-    color: inherit;
+  }
+
+  .time {
+    color: #06D001;
   }
   
   .navLinks {
     display: flex;
     align-items: center;
-    gap: 2rem;  /* Slightly reduced gap */
+    gap: 2rem;  
   }
   
   .navLink {
-    font-size: 1.5rem;  /* Reduced font size */
+    font-size: 1.5rem;  
     text-decoration: none;
-    color: inherit;
+    color: #ffffff;
     transition: color 0.3s ease;
   }
   
   .navLink:hover {
-    color: #FFE0B5;
+    color: #06D001;
   }
   
   .transparent {

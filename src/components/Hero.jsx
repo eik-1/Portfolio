@@ -1,9 +1,11 @@
 import React from "react"
 import { Twitter, Linkedin, Instagram } from "lucide-react"
+import { motion } from "framer-motion"
 
 import GradualSpacing from "./magicui/GradualSpacing"
 import ShinyButton from "./magicui/ShinyButton"
 import styles from "./Hero.module.css"
+import myPic from "../assets/mypic.jpg"
 
 function Hero() {
     return (
@@ -15,7 +17,7 @@ function Hero() {
                         text="Hi! I'm Eik"
                     />
                     <p className={styles.introduction}>
-                        Hello! I'm a passionate full-stack{" "}
+                        Hey! My name is Sarthak and I'm a passionate full-stack{" "}
                         <span className={styles.inside}>Web3</span> developer
                         with 2 years of experience in this community. I believe
                         that <span className={styles.inside}>Blockchain</span>{" "}
@@ -29,7 +31,7 @@ function Hero() {
                         />
                         <div className={styles.socials}>
                             <a
-                                href="https://twitter.com/yourusername"
+                                href="https://x.com/0xeik"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.socialLink}
@@ -37,7 +39,7 @@ function Hero() {
                                 <Twitter size={24} />
                             </a>
                             <a
-                                href="https://linkedin.com/in/yourusername"
+                                href="https://www.linkedin.com/in/sarthakeik1/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.socialLink}
@@ -45,7 +47,7 @@ function Hero() {
                                 <Linkedin size={24} />
                             </a>
                             <a
-                                href="https://instagram.com/yourusername"
+                                href="https://www.instagram.com/eik.eth/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.socialLink}
@@ -55,13 +57,38 @@ function Hero() {
                         </div>
                     </div>
                 </div>
-                <div className={styles.imageContainer}>
-                    <img
-                        src="src/assets/mypic.jpg"
-                        alt="Eik"
+                <motion.div
+                    className={styles.imageContainer}
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <motion.img
+                        src={myPic}
+                        alt="My Image"
                         className={styles.profileImage}
+                        whileHover={{
+                            rotate: 5,
+                            scale: 1.05,
+                            boxShadow: "0 0 15px #06D001",
+                        }}
                     />
-                </div>
+                    <motion.div
+                        className={styles.glowingBorder}
+                        animate={{
+                            boxShadow: [
+                                "0 0 5px #06D001",
+                                "0 0 20px #06D001",
+                                "0 0 5px #06D001",
+                            ],
+                        }}
+                        transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            repeatType: "reverse",
+                        }}
+                    />
+                </motion.div>
             </div>
         </section>
     )

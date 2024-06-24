@@ -5,6 +5,9 @@ import styles from "./Navbar.module.css"
 
 function Navbar() {
     const [scrolled, setScrolled] = useState(false)
+    const [time, setTime] = useState(
+        new Date().toLocaleTimeString("en-US", { hour12: false }),
+    )
 
     useEffect(() => {
         const handleScroll = () => {
@@ -20,13 +23,24 @@ function Navbar() {
         }
     }, [])
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTime(new Date().toLocaleTimeString("en-US", { hour12: false }))
+        }, 1000)
+        return () => {
+            clearInterval(interval)
+        }
+    }, [])
+
     return (
         <nav
             className={`${styles.navbar} ${scrolled ? styles.scrolled : styles.transparent}`}
         >
             <div>
                 <Link to="/" className={styles.logo}>
-                    <h1>Eik</h1>
+                    <h1>
+                        Eik <span className={styles.time}>[{time}]</span>
+                    </h1>
                 </Link>
             </div>
             <div className={styles.navLinks}>

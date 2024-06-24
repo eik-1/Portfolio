@@ -7,7 +7,7 @@ import styles from "./Copy.module.css"
 function Copy() {
     return (
         <CopyButton
-            buttonColor="#D8AE7E"
+            buttonColor="#06D001"
             buttonTextColor="#ffffff"
             subscribeStatus={false}
             className={styles.copyButton}

@@ -32,25 +32,25 @@ const ShinyButton = ({ text = "shiny-button", githubUrl }) => {
     <motion.button
   {...animationProps}
   onClick={handleClick}
-  className="relative rounded-lg px-6 py-2 font-medium backdrop-blur-xl transition-[box-shadow] duration-300 ease-in-out hover:shadow hover:shadow-[#6F4E37]"
+  className="relative rounded-lg px-6 py-2 font-medium backdrop-blur-xl transition-[box-shadow] duration-300 ease-in-out hover:shadow"
   style={{
     "--primary": "32 70% 69%",
-    backgroundColor: "#FF5F00",
-    border: "1px solid #ECB176",
+    backgroundColor: "#06D001",
+    border: "2px solid #C1F2B0",
   } as React.CSSProperties}
 >
   <span
-    className="relative flex items-center justify-center h-full w-full text-sm uppercase tracking-wide text-[#ECB176]"
+    className="relative flex items-center justify-center h-full w-full text-sm uppercase tracking-wide text-[#ffffff]"
     style={{
       maskImage:
-        "linear-gradient(-75deg, #FFF2D7 calc(var(--x) + 20%), transparent calc(var(--x) + 30%), #FFF2D7 calc(var(--x) + 100%))",
+        "linear-gradient(-75deg, #C1F2B0 calc(var(--x) + 20%), transparent calc(var(--x) + 30%), #C1F2B0 calc(var(--x) + 100%))",
     }}
   >
     {text} <ChevronRightIcon className="ml-1 h-4 w-4" />
   </span>
   <span
     style={{
-      mask: "linear-gradient(#FFF2D7, #FFF2D7) content-box, linear-gradient(#FFF2D7, #FFF2D7)",
+      mask: "linear-gradient(#C1F2B0, #C1F2B0) content-box, linear-gradient(#C1F2B0, #C1F2B0)",
       maskComposite: "exclude",
     }}
     className="absolute inset-0 z-10 block rounded-[inherit] p-px"
