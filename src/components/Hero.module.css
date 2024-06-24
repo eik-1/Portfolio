@@ -20,7 +20,7 @@
     padding-left: 2rem;
     color: #D8AE7E;
 }
-  
+
 .name {
     font-family: "Space Mono", monospace;
     font-weight: 700;
@@ -38,8 +38,44 @@
 }
 
 .inside {
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
     background-color: #ECB176 ;
     color: #FF5F00;
+    padding: 2px;
+}
+
+.inside:hover {
+    background-color: #FF5F00;
+    color: #ECB176;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.socials {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ECB176;
+    color: #6F4E37;
+    transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+    background-color: #6F4E37;
+    color: #ECB176;
 }
   
 .imageContainer {
@@ -50,8 +86,8 @@
 }
   
 .profileImage {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
