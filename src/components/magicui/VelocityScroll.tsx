@@ -1,73 +1,106 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import { cn } from "../../lib/utils";
+import { wrap } from "@motionone/utils";
+import {
+  motion,
+  useAnimationFrame,
+  useMotionValue,
+  useScroll,
+  useSpring,
+  useTransform,
+  useVelocity,
+} from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
 
 interface VelocityScrollProps {
-  children: string;
-  direction?: 'left' | 'right';
+  text: string;
+  baseVelocity?: number;
   className?: string;
-  highlightColor: string;
+  coloredClass?: string;
+  children?: React.ReactNode;
 }
 
-export function VelocityScroll({
+function ParallaxText({
   children,
-  direction = 'left',
+  baseVelocity = 100,
   className,
-  highlightColor,
+  coloredClass,
 }: VelocityScrollProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [contentWidth, setContentWidth] = useState(0);
+  const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
-  const springConfig = { stiffness: 100, damping: 30, restDelta: 0.001 };
-  
-  const x = useSpring(
-    useTransform(
-      scrollY,
-      [0, 1000],
-      direction === 'left' ? [0, -contentWidth] : [-contentWidth, 0]
-    ),
-    springConfig
-  );
+  const scrollVelocity = useVelocity(scrollY);
+  const smoothVelocity = useSpring(scrollVelocity, {
+    damping: 50,
+    stiffness: 400,
+  });
+
+  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
+    clamp: false,
+  });
+
+  const [repetitions, setRepetitions] = useState(1);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    if (ref.current) {
-      setContentWidth(ref.current.scrollWidth / 2);
-    }
+    const calculateRepetitions = () => {
+      if (containerRef.current && textRef.current) {
+        const containerWidth = containerRef.current.offsetWidth;
+        const textWidth = textRef.current.offsetWidth;
+        const newRepetitions = Math.ceil(containerWidth / textWidth) + 2;
+        setRepetitions(newRepetitions);
+      }
+    };
+
+    calculateRepetitions();
+
+    window.addEventListener("resize", calculateRepetitions);
+    return () => window.removeEventListener("resize", calculateRepetitions);
   }, [children]);
 
-  useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
-    const handleScrollEnd = () => {
-      timeoutId = setTimeout(() => {
-        x.stop();
-      }, 500);
-    };
+  const x = useTransform(baseX, (v) => `${wrap(-100 / repetitions, 0, v)}%`);
 
-    window.addEventListener('scroll', handleScrollEnd);
-    return () => {
-      window.removeEventListener('scroll', handleScrollEnd);
-      if (timeoutId) clearTimeout(timeoutId);
-    };
-  }, [x]);
+  const directionFactor = React.useRef<number>(1);
+  useAnimationFrame((t, delta) => {
+    let moveBy = directionFactor.current * baseVelocity * (delta / 20000);
 
-  const words = children.split('.');
-  const repeatedWords = Array(20).fill(words).flat();
+    if (velocityFactor.get() < 0) {
+      directionFactor.current = -1;
+    } else if (velocityFactor.get() > 0) {
+      directionFactor.current = 1;
+    }
+
+    moveBy += directionFactor.current * moveBy * velocityFactor.get();
+
+    baseX.set(baseX.get() + moveBy);
+  });
 
   return (
-    <div ref={ref} className={`overflow-hidden whitespace-nowrap ${className}`}>
-      <motion.div style={{ x }} className="inline-block">
-        {repeatedWords.map((word, index) => (
-          <span key={index} className={`inline-block mx-4 ${index % words.length === 0 ? highlightColor : ''}`}>
-            {word}
-          </span>
-        ))}
-      </motion.div>
-      <motion.div style={{ x }} className="inline-block">
-        {repeatedWords.map((word, index) => (
-          <span key={index} className={`inline-block mx-4 ${index % words.length === 0 ? highlightColor : ''}`}>
-            {word}
+    <div
+      className="w-full overflow-hidden whitespace-nowrap"
+      ref={containerRef}
+    >
+      <motion.div className={cn("inline-block", className)} style={{ x }}>
+        {Array.from({ length: repetitions }).map((_, i) => (
+          <span key={i} ref={i === 0 ? textRef : null}>
+            <span className={i === 0 ? coloredClass : ''}>{children}</span>{" "}
           </span>
         ))}
       </motion.div>
     </div>
+  );
+}
+
+export function VelocityScroll({
+  text,
+  baseVelocity = 5,
+  className,
+  coloredClass,
+}: VelocityScrollProps) {
+  return (
+    <section className="relative w-full">
+      <ParallaxText text={text} baseVelocity={baseVelocity} className={className} coloredClass={coloredClass}>
+        {text}
+      </ParallaxText>
+    </section>
   );
 }

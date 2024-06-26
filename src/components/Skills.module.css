@@ -1,18 +1,20 @@
 .skillsSection {
-  padding: 4rem 0;
+  padding: 2rem 0;
+  overflow: hidden;
 }
 
 .title {
+  text-align: center;
   font-size: 5rem;
   font-weight: bold;
-  text-align: center;
   margin-bottom: 2rem;
   color: #06D001;
+  text-shadow: 4px 4px 2px #C1F2B0;
 }
 
-.marqueeWrapper {
+.marquee {
   font-size: 4rem;
   font-weight: bold;
-  padding: 1rem 0;
-  color: rgba(255, 255, 255, 0.2);
+  padding: 0.1rem 0;
+  text-transform: uppercase;
 }
