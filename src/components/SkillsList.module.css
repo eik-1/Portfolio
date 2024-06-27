@@ -1,0 +1,58 @@
+.section {
+    overflow: hidden;
+    padding-top: 0rem;
+    padding-bottom: 5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.heading {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: white;
+}
+
+.skillRow {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #4a5568; 
+    position: relative;
+    opacity: 0.9;
+}
+
+.skillName {
+    font-size: 4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    transition: color 0.3s;
+}
+
+@media (min-width: 768px) {
+    .skillName {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .skillName {
+        font-size: 6rem;
+    }
+}
+
+.circleIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #cbd5e0; 
+}
