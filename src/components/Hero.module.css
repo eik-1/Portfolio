@@ -65,10 +65,12 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    /* border-radius: 50%;
-    background-color: #ECB176; */
     color: #06D001;
-    transition: all 0.3s ease;
+}
+
+.mediumSvg {
+    width: 30px;
+    height: 30px;
 }
   
 .imageContainer {

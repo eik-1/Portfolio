@@ -58,6 +58,7 @@ const SkillsList = ({ skills }) => {
                                     style={{
                                         color:
                                             i === 7 ? skill.color : "inherit",
+                                        opacity: i === 7 ? 1 : 0.5,
                                     }}
                                 >
                                     {skill.name}

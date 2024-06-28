@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import GradualSpacing from "./magicui/GradualSpacing"
 import ShinyButton from "./magicui/ShinyButton"
 import styles from "./Hero.module.css"
-import myPic from "../assets/mypic.jpg"
+import { medium, myPic } from "../assets"
 
 function Hero() {
     return (
@@ -53,6 +53,18 @@ function Hero() {
                                 className={styles.socialLink}
                             >
                                 <Instagram size={24} />
+                            </a>
+                            <a
+                                href="https://www.instagram.com/eik.eth/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.socialLink}
+                            >
+                                <img
+                                    className={styles.mediumSvg}
+                                    src={medium}
+                                    alt="medium"
+                                />
                             </a>
                         </div>
                     </div>
