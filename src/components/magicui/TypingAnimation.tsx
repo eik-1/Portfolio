@@ -10,7 +10,7 @@ interface TypingAnimationProps {
 
 export default function TypingAnimation({
   text,
-  duration = 150,
+  duration = 200,
   className,
   isVisible,
 }: TypingAnimationProps) {
