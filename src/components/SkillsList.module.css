@@ -36,6 +36,8 @@
     text-transform: uppercase;
     letter-spacing: -0.02em;
     transition: color 0.3s;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
 }
 
 @media (min-width: 768px) {

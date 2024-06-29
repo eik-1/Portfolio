@@ -44,7 +44,7 @@ const SkillsList = ({ skills }) => {
     return (
         <section ref={componentRef} className={styles.section}>
             <div className={styles.container}>
-                <h2 className={styles.heading}>My Techstack</h2>
+                <h2 className={styles.heading}>Techstack</h2>
                 {skills.map((skill, index) => (
                     <div
                         key={index}

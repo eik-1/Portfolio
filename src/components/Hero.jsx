@@ -55,7 +55,7 @@ function Hero() {
                                 <Instagram size={24} />
                             </a>
                             <a
-                                href="https://www.instagram.com/eik.eth/"
+                                href="https://medium.com/@sarthakrawatbiz"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.socialLink}
