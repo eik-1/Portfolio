@@ -9,7 +9,7 @@ import { medium, myPic } from "../assets"
 
 function Hero() {
     return (
-        <section className={styles.heroSection}>
+        <section className={styles.wrapper}>
             <div className={styles.heroContent}>
                 <div className={styles.introText}>
                     <GradualSpacing

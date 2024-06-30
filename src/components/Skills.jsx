@@ -13,6 +13,7 @@ const slugs = [
     "css3",
     "docker",
     "git",
+    "html5",
     "ipfs",
     "nextdotjs",
     "solidity",
