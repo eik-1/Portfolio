@@ -2,19 +2,20 @@ import React from "react"
 
 import { CardContainer, CardBody, CardItem } from "./magicui/CardsHover"
 import styles from "./Projects.module.css"
+import { StoX, dBeats } from "../assets/projects"
 
 const projects = [
     {
-        title: "Project 1",
-        description: "sdasdasfasfdas",
-        imageSrc: "https://via.placeholder.com/1000",
-        demoLink: "https://google.com",
-        githubLink: "https://apple.com",
+        title: "StoX",
+        description: "Tokenizing Stocks Using Chainlink",
+        imageSrc: StoX,
+        demoLink: "https://stox-tokenize.vercel.app",
+        githubLink: "https://github.com/eik-1/stox-foundry-contracts",
     },
     {
-        title: "Project 2",
-        description: "asfasfgasgadg",
-        imageSrc: "https://via.placeholder.com/1000",
+        title: "dBeats",
+        description: "NFT Marketplace For Music",
+        imageSrc: dBeats,
         demoLink: "https://google.com",
         githubLink: "https://apple.com",
     },
