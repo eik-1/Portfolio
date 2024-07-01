@@ -4,6 +4,7 @@ import Hero from "../components/Hero"
 import Techstack from "../components/Techstack"
 import Skills from "../components/Skills"
 import Projects from "../components/Projects"
+import ArticleSection from "../components/ArticleSection"
 
 function Home() {
     return (
@@ -12,6 +13,7 @@ function Home() {
             <Techstack />
             <Skills />
             <Projects />
+            <ArticleSection />
         </div>
     )
 }
