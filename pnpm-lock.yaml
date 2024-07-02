@@ -32,9 +32,6 @@ importers:
       lucide-react:
         specifier: ^0.396.0
         version: 0.396.0(react@18.3.1)
-      medium-article-api:
-        specifier: ^1.0.4
-        version: 1.0.4
       next-themes:
         specifier: ^0.3.0
         version: 0.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2207,9 +2204,6 @@ packages:
     resolution: {integrity: sha512-N/zP+9vEfEYHiMWMpjwH/M5diaV0e4UFe07BpgdzaRYce5QvXi87hixf7F0Xqdr3zuX/9u7H/2D4MVXIK22O0A==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
-
-  medium-article-api@1.0.4:
-    resolution: {integrity: sha512-lF0E5EK9n4xVfbngsqJPI0KPo2IlLEoT+zOdFLPbfprGOuAGBokS5GdOGQ7WLDVWjVsBfIRk1M3nMry/B3ypQw==}
 
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
@@ -5360,8 +5354,6 @@ snapshots:
   lucide-react@0.396.0(react@18.3.1):
     dependencies:
       react: 18.3.1
-
-  medium-article-api@1.0.4: {}
 
   merge2@1.4.1: {}
 
