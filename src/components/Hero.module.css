@@ -30,7 +30,7 @@
     margin-bottom: 1rem;
     letter-spacing: -5px;
     color: #C1F2B0;
-    text-shadow: 4px 4px 2px #06D001;
+    text-shadow: 4px 4px 2px rgb(64, 224, 125);
 }
   
 .introduction {
@@ -39,12 +39,12 @@
 }
 
 .introduction::selection {
-    background-color: #06D001;
+    background-color: rgb(64, 224, 125);
 }
 
 .inside {
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
-    color: #06D001;
+    color: rgb(64, 224, 125);
 }
 
 .links {
@@ -65,7 +65,7 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    color: #06D001;
+    color: rgb(64, 224, 125);
 }
 
 .mediumSvg {

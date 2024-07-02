@@ -15,9 +15,10 @@
 }
 
 .postsWrapper {
-    margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10rem;
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    width: 90%;
 }

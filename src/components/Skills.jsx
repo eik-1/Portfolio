@@ -29,12 +29,11 @@ const slugs = [
 const skills = [
     "solidity",
     "rust",
-    "typescript",
+    "javascript",
     "chainlink",
     "wagmi",
     "ipfs",
     "react",
-    "supabase",
     "docker",
     "git",
     "counterstrike",
@@ -76,7 +75,7 @@ const OtherSkills = () => {
                     {skills.map((skill) => (
                         <TypingAnimation
                             key={skill}
-                            className="text-2xl font-bold text-[#06D001] font-space"
+                            className="text-2xl font-bold text-[rgb(64, 224, 125)] font-space"
                             text={`- ${skill}`}
                             isVisible={isVisible}
                         />

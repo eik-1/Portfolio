@@ -43,6 +43,7 @@
 .skillsText {
   display: flex;
   flex-direction: column;
+  color: rgb(64, 224, 125);
   align-items: start;
   margin-left: 5rem;
 }

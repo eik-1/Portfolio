@@ -82,16 +82,16 @@ function Hero() {
                         whileHover={{
                             rotate: 5,
                             scale: 1.05,
-                            boxShadow: "0 0 15px #06D001",
+                            boxShadow: "0 0 15px rgb(64, 224, 125)",
                         }}
                     />
                     <motion.div
                         className={styles.glowingBorder}
                         animate={{
                             boxShadow: [
-                                "0 0 5px #06D001",
-                                "0 0 20px #06D001",
-                                "0 0 5px #06D001",
+                                "0 0 5px rgb(64, 224, 125)",
+                                "0 0 20px rgb(64, 224, 125)",
+                                "0 0 5px rgb(64, 224, 125)",
                             ],
                         }}
                         transition={{

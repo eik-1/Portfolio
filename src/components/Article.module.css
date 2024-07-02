@@ -1,0 +1,35 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 2px solid rgb(64, 224, 125);
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.imageWrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.articleTitle {
+    font-weight: bold;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: black;
+}

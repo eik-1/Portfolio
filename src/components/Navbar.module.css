@@ -20,7 +20,7 @@
   }
 
   .time {
-    color: #06D001;
+    color: rgb(64, 224, 125);
   }
   
   .navLinks {
@@ -37,7 +37,7 @@
   }
   
   .navLink:hover {
-    color: #06D001;
+    color: rgb(64, 224, 125);
   }
   
   .transparent {

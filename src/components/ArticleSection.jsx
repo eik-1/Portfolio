@@ -14,7 +14,13 @@ function ArticleSection() {
                 )
                 const data = await response.json()
                 const items = data.items || []
-                setPosts(items)
+                const postsWithImages = items.map((post) => {
+                    const imageSrc = post.description.match(
+                        /<img[^>]+src="([^">]+)/,
+                    )?.[1]
+                    return { ...post, imageSrc }
+                })
+                setPosts(postsWithImages)
             } catch (error) {
                 console.error("Error fetching blog posts:", error)
                 setPosts(["EROOR"])

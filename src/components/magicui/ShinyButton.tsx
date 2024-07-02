@@ -35,8 +35,8 @@ const ShinyButton = ({ text = "shiny-button", githubUrl }) => {
   className="relative rounded-lg px-6 py-2 font-medium backdrop-blur-xl transition-[box-shadow] duration-300 ease-in-out hover:shadow"
   style={{
     "--primary": "32 70% 69%",
-    backgroundColor: "#06D001",
-    border: "2px solid #C1F2B0",
+    backgroundColor: "rgb(64, 224, 125)",
+    border: "2px solid #ffffff",
   } as React.CSSProperties}
 >
   <span
