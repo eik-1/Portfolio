@@ -9,15 +9,15 @@
     right: 0;
     z-index: 1000;
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
-  }
+}
   
-  .logo {
+.logo {
     color: #ffffff;
     font-family: "Space Mono", monospace;
-    font-size: 2rem;  
+    font-size: 2.3rem;  
     font-weight: 700;
     text-decoration: none;
-  }
+}
 
   .time {
     color: rgb(64, 224, 125);

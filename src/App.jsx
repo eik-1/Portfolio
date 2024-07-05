@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
 
 import Home from "./pages/Home"
+import Footer from "./components/Footer"
 
 function App() {
     const name = `                                                                                                 
@@ -30,6 +31,7 @@ EEEEEEEEEEEEEEEEEEEEEEiiiiiiiikkkkkkkk    kkkkkkk
             <Routes>
                 <Route index element={<Home />} />
             </Routes>
+            <Footer />
         </BrowserRouter>
     )
 }

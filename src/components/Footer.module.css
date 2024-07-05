@@ -1,0 +1,97 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 7rem;  
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    padding-bottom: 2rem;
+}
+
+.copyright {
+    color: rgb(64, 224, 125);
+    font-family: "Space Mono", monospace;
+    font-size: 1.2rem;  
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.getInTouch {
+    text-align: right;
+    max-width: 300px;
+}
+
+.getInTouchTitle {
+    color: rgb(64, 224, 125);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.getInTouchTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(64, 224, 125);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.getInTouchTitle:hover::after {
+    transform: scaleX(1);
+}
+
+
+.getInTouchText {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #cccccc;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.socialLinks a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.socialLinks a:hover {
+    color: rgb(64, 224, 125);
+}
+
+.separator {
+    color: #ffffff;
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .copyright {
+        margin-bottom: 1rem;
+    }
+
+    .getInTouch {
+        text-align: center;
+    }
+
+    .socialLinks {
+        justify-content: center;
+    }
+}
