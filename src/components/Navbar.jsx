@@ -57,7 +57,7 @@ function Navbar() {
                 </div>
                 <div className={styles.mobileMenuToggle}>
                     <button onClick={toggleMobileMenu}>
-                        <Menu size={24} />
+                        <Menu size={29} />
                     </button>
                 </div>
             </nav>
@@ -69,7 +69,7 @@ function Navbar() {
                         className={styles.closeButton}
                         onClick={toggleMobileMenu}
                     >
-                        <X size={24} />
+                        <X size={29} />
                     </button>
                     <div className={styles.mobileMenuLinks}>
                         <Link
