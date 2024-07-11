@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { Circle } from "lucide-react"
 import styles from "./SkillsList.module.css"
 
 gsap.registerPlugin(ScrollTrigger)
@@ -63,7 +62,6 @@ const SkillsList = ({ skills }) => {
                                 >
                                     {skill.name}
                                 </span>
-                                <Circle className={styles.circleIcon} />
                             </React.Fragment>
                         ))}
                     </div>

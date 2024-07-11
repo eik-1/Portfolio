@@ -5,7 +5,7 @@
     min-height: 100vh;
     padding: 2rem;
 }
-  
+
 .heroContent {
     display: flex;
     align-items: center;
@@ -13,7 +13,7 @@
     max-width: 1200px;
     width: 100%;
 }
-  
+
 .introText {
     flex: 1;
     padding-right: 2rem;
@@ -29,10 +29,10 @@
     margin-left: 0;
     margin-bottom: 1rem;
     letter-spacing: -5px;
-    color: #C1F2B0;
-    text-shadow: 4px 4px 2px rgb(64, 224, 125);
+    color: rgb(64, 224, 125);
+    text-shadow: 4px 4px 2px #C1F2B0;
 }
-  
+
 .introduction {
     font-size: 1.5rem;
     line-height: 1.6;
@@ -72,34 +72,103 @@
     width: 30px;
     height: 30px;
 }
-  
+
 .imageContainer {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;  
 }
-  
+
 .profileImage {
     width: 350px;
     height: 350px;
     object-fit: cover;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
-  
-@media (max-width: 768px) {
+
+@media (max-width: 1024px) {
+    .wrapper {
+        margin-top: 0rem;
+        min-height: 80vh;
+        padding: 2rem;
+    }
+
     .heroContent {
         flex-direction: column;
         text-align: center;
     }
-  
+
     .introText {
-        padding-right: 0;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        margin-top: 2rem;
         margin-bottom: 2rem;
     }
-  
+
+    .name {
+        font-size: 4rem;
+        margin-left: 13rem;
+        letter-spacing: -3px;
+    }
+
+    .introduction {
+        font-size: 1.3rem;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .socials {
+        margin-top: 0rem;
+    }
+
+    .imageContainer {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 580px) {
+    .wrapper {
+        margin-top: 3rem;
+        min-height: 80vh;
+        padding: 0;
+        margin-bottom: 3rem;
+    }
+    
+    .name {
+        text-align: center;
+        margin-left: 1.3rem;
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 2px #C1F2B0;
+    }
+    
+    .introduction {
+        font-size: 1rem; 
+    }
+    
+    .socials {
+        gap: 0.7rem;
+    }
+    
+    .socialLink {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .mediumSvg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .imageContainer {
+        margin-top: 1rem;
+    }
+    
     .profileImage {
-      width: 250px;
-      height: 250px;
+        width: 200px;
+        height: 200px;
     }
 }

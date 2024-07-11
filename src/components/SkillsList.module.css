@@ -31,7 +31,7 @@
 }
 
 .skillName {
-    font-size: 4rem;
+    font-size: 6rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: -0.02em;
@@ -40,20 +40,35 @@
     padding-bottom: 0rem;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1024px) {
+    .container {
+        max-width: 600px;
+    }
+
+    .heading {
+        font-size: 4.3rem;
+    }
+
     .skillName {
         font-size: 4rem;
     }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 580px) {
+    .section {
+        padding-bottom: 3rem;
+    }
+
+    .container {
+        max-width: 600px;
+    }
+
+    .heading {
+        font-size: 3.5rem;
+    }
+
     .skillName {
-        font-size: 6rem;
+        font-size: 3rem;
     }
 }
 
-.circleIcon {
-    width: 1.5rem;
-    height: 1.5rem;
-    color: #cbd5e0; 
-}
