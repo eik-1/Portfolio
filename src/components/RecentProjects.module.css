@@ -1,0 +1,115 @@
+.projectsWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding-bottom: 5rem;
+}
+  
+.sectionTitle {
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+  
+.projectsSection {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10rem;
+}
+  
+.projectItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+  
+@media (min-width: 640px) {
+    .projectItem {
+      width: 24rem;
+    }
+}
+  
+@media (min-width: 1024px) {
+    .projectItem {
+      height: 32.5rem;
+    }
+}
+  
+.imageContainer {
+    width: 100%;
+    margin-top: 1rem;
+}
+  
+.coverImage {
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+  
+.projectTitle {
+    font-size: 1.5rem; 
+    font-family: "Space Mono", monospace; 
+    font-weight: bold;
+    color: rgb(64, 224, 125); 
+}
+  
+.projectDescription {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ffffff;
+    overflow: hidden;
+}
+  
+.projectFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+  
+.iconList {
+    display: flex;
+    align-items: center;
+}
+  
+.iconWrapper {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+    background-color: black;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.icon {
+    padding: 0.5rem;
+}
+  
+.githubLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 2px solid rgb(64, 224, 125)
+}
+  
+.linkText {
+    font-size: 1rem; 
+    padding: 0.5rem;
+    color: white;
+}
+  
+.arrowIcon {
+    color: white;
+}

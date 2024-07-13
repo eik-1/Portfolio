@@ -5,6 +5,7 @@ import Techstack from "../components/Techstack"
 import Skills from "../components/Skills"
 import Projects from "../components/Projects"
 import ArticleSection from "../components/ArticleSection"
+import RecentProjects from "../components/RecentProjects"
 
 function Home() {
     return (
@@ -12,7 +13,7 @@ function Home() {
             <Hero />
             <Techstack />
             <Skills />
-            <Projects />
+            <RecentProjects />
             <ArticleSection />
         </div>
     )

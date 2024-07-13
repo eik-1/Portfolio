@@ -12,10 +12,13 @@ function Hero() {
         <section className={styles.wrapper}>
             <div className={styles.heroContent}>
                 <div className={styles.introText}>
-                    <GradualSpacing
-                        className={styles.name}
-                        text="Hi! I'm Eik"
-                    />
+                    <div className={styles.name}>
+                        <GradualSpacing
+                            // className={styles.name}
+                            text="Hi! I'm Eik"
+                        />
+                    </div>
+
                     <p className={styles.introduction}>
                         Hey! My name is Sarthak and I'm a passionate full-stack{" "}
                         <span className={styles.inside}>Web3</span> developer
