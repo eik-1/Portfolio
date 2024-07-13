@@ -30,18 +30,6 @@
     padding-bottom: 5rem;
 }
   
-@media (min-width: 640px) {
-    .projectItem {
-      width: 24rem;
-    }
-}
-  
-@media (min-width: 1024px) {
-    .projectItem {
-      height: 32.5rem;
-    }
-}
-  
 .imageContainer {
     width: 100%;
     margin-top: 1rem;
@@ -112,4 +100,30 @@
   
 .arrowIcon {
     color: white;
+}
+
+@media (max-width: 1024px) {
+    .projectsWrapper {
+        min-height: 60vh;
+        margin-top: 0rem;
+        margin-bottom: 3rem;
+    }
+
+    .sectionTitle h1 {
+        white-space: pre-wrap;
+    }
+}
+
+@media (max-width: 580px) {
+    .sectionTitle {
+        padding-top: 0rem;
+        margin-top: 0;
+        font-size: 3.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .titleWord {
+        display: inline-block;
+    }
 }

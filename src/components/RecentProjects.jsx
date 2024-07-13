@@ -8,7 +8,10 @@ import styles from "./RecentProjects.module.css"
 const RecentProjects = () => {
     return (
         <div className={styles.projectsWrapper}>
-            <h1 className={styles.sectionTitle}>Recent Projects</h1>
+            <h1 className={styles.sectionTitle}>
+                <span className={styles.titleWord}>Recent</span>{" "}
+                <span className={styles.titleWord}>Projects</span>
+            </h1>
             <div className={styles.projectsSection}>
                 {projects.map((item) => (
                     <div className={styles.projectItem} key={item.id}>
