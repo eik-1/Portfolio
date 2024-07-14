@@ -31,7 +31,10 @@ function ArticleSection() {
 
     return (
         <div className={styles.wrapper}>
-            <h1 className={styles.heading}>Latest Articles</h1>
+            <h1 className={styles.heading}>
+                <span className={styles.titleWord}>Latest</span>{" "}
+                <span className={styles.titleWord}>Articles</span>
+            </h1>
             <div className={styles.postsWrapper}>
                 {posts.slice(0, 6).map((post, index) => (
                     <Article key={index} {...post} index={index} />

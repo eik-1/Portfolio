@@ -1,5 +1,11 @@
+import Temp from "../components/About/Temp"
+
 function About() {
-    return <div></div>
+    return (
+        <div>
+            <Temp />
+        </div>
+    )
 }
 
 export default About

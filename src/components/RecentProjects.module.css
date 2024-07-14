@@ -38,7 +38,7 @@
 .coverImage {
     height: 15rem;
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 1rem;
 }
   
@@ -60,8 +60,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0.7rem;
+    margin-bottom: 1.3rem;
 }
   
 .iconList {
@@ -115,6 +115,12 @@
 }
 
 @media (max-width: 580px) {
+    .projectsWrapper {
+        min-height: 60vh;
+        margin-top: 0rem;
+        margin-bottom: 2rem;
+    }
+
     .sectionTitle {
         padding-top: 0rem;
         margin-top: 0;
@@ -125,5 +131,27 @@
 
     .titleWord {
         display: inline-block;
+    }
+
+    .projectsSection {
+        margin-top: 0.8rem;
+        gap: 1rem;
+    }
+      
+    .projectItem {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .coverImage {
+        height: 12rem;
+    }
+      
+    .projectTitle {
+        font-size: 1.2rem;  
+    }
+      
+    .projectDescription {
+        font-size: 0.7rem;
     }
 }

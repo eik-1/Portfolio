@@ -1,0 +1,19 @@
+.tempDiv {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.temp {
+    color: rgb(64, 224, 125);
+    font-family: "Space Mono", monospace;   
+}
+
+@media (max-width: 580px) {
+    .temp {
+        font-size: 3rem;
+    }
+}
