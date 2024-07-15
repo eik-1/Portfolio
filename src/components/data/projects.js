@@ -18,7 +18,7 @@ export const projects = [
         des: "NFT Marketplace For Music",
         img: dBeats,
         iconLists: [],
-        link: "https://google.com",
-        github: "https://apple.com",
+        link: "https://locs-nu.vercel.app",
+        github: "https://locs-nu.vercel.app",
     },
 ]
