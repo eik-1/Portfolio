@@ -84,7 +84,9 @@
     }
 
     .copyright {
-        margin-bottom: 1rem;
+        margin-bottom: 0.2rem;
+        margin-right: 0.3rem;
+        font-size: 0.9rem;
     }
 
     .getInTouch {

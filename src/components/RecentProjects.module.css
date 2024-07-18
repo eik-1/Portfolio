@@ -16,10 +16,11 @@
   
 .projectsSection {
     margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    width: 90%;
 }
   
 .projectItem {
@@ -38,7 +39,7 @@
 .coverImage {
     height: 15rem;
     width: 100%;
-    object-fit: fill;
+    object-fit:cover;
     border-radius: 1rem;
 }
   
@@ -135,6 +136,7 @@
 
     .projectsSection {
         margin-top: 0.8rem;
+        grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
     }
       
