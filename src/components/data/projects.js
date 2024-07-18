@@ -24,7 +24,7 @@ export const projects = [
     {
         id: 3,
         title: "Token Indexer",
-        des: "App That Uses The Alchemy SDK To Display All ERC-20 Token Balances.",
+        des: "App That Displays ERC-20 Token Balances",
         img: TokenIndexer,
         iconLists: [],
         link: "https://token-indexer-iota.vercel.app",
