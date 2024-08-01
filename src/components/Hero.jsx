@@ -85,7 +85,7 @@ function Hero() {
                         whileHover={{
                             rotate: 5,
                             scale: 1.05,
-                            boxShadow: "0 0 15px rgb(64, 224, 125)",
+                            boxShadow: "0 0 20px rgb(64, 224, 125)",
                         }}
                     />
                     <motion.div
