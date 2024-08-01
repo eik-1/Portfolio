@@ -1,4 +1,4 @@
-import { cn } from "../../lib/utils";
+import { cn } from "../../../lib/utils";
 import React, { useEffect, useState, useRef } from "react";
 
 interface ShootingStar {
@@ -42,11 +42,11 @@ const getRandomStartPoint = () => {
 };
 const ShootingStars: React.FC<ShootingStarsProps> = ({
   minSpeed = 10,
-  maxSpeed = 30,
-  minDelay = 1000,
-  maxDelay = 3000,
-  starColor = "#9E00FF",
-  trailColor = "rgb(64, 224, 125)",
+  maxSpeed = 20,
+  minDelay = 3000,
+  maxDelay = 5000,
+  starColor = "rgb(64, 224, 125)",
+  trailColor = "#2EB9DF",
   starWidth = 10,
   starHeight = 1,
   className,

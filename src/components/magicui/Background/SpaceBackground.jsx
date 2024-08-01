@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
 import ShootingStars from "./ShootingStars"
-import { StarsBackground } from "./StarsBackground"
+import { StarsBackground } from "../StarsBackground"
 
 const SpaceBackground = () => {
     const [isVisible, setIsVisible] = useState(true)

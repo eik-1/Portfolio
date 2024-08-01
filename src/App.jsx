@@ -5,7 +5,7 @@ import Footer from "./components/Footer"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Blog from "./pages/Blog"
-import SpaceBackground from "./components/magicui/SpaceBackground"
+import SpaceBackground from "./components/magicui/Background/SpaceBackground"
 
 function App() {
     const name = `                                                                                                 
