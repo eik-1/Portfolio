@@ -1,31 +1,70 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Twitter, Linkedin, Instagram } from "lucide-react"
+import { Canvas } from "@react-three/fiber"
+import { OrbitControls, Environment } from "@react-three/drei"
 import { motion } from "framer-motion"
 
-import GradualSpacing from "./magicui/GradualSpacing"
 import ShinyButton from "./magicui/ShinyButton"
 import styles from "./Hero.module.css"
-import { medium, myPic } from "../assets"
+import Ethereum from "./Ethereum"
+import { medium } from "../assets"
+import { Suspense } from "react"
 
 function Hero() {
+    const [isVisible, setIsVisible] = useState(false)
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsVisible(true)
+        }, 300)
+
+        return () => clearTimeout(timer)
+    }, [])
+
+    const fadeInFromBottom = {
+        hidden: {
+            opacity: 0,
+            y: 50,
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.8,
+                ease: "easeOut",
+                delay: 0.2,
+            },
+        },
+    }
+
     return (
         <section className={styles.wrapper}>
+            <div className={`${styles.gradientCircle} ${styles.circle1}`}></div>
+            <div className={`${styles.gradientCircle} ${styles.circle2}`}></div>
             <div className={styles.heroContent}>
                 <div className={styles.introText}>
-                    <div className={styles.name}>
-                        <GradualSpacing
-                            // className={styles.name}
-                            text="Hi! I'm Eik"
+                    <motion.div
+                        className={styles.name}
+                        initial="hidden"
+                        animate={isVisible ? "visible" : "hidden"}
+                        variants={fadeInFromBottom}
+                    >
+                        <img
+                            className={styles.wavingHand}
+                            src="/apple_waving.png"
+                            alt="waving"
                         />
-                    </div>
+                        <h1>
+                            I'm <span className={styles.nameitalic}>Eik</span>
+                        </h1>
+                    </motion.div>
 
                     <p className={styles.introduction}>
-                        Hey! My name is Sarthak and I'm a passionate full-stack{" "}
+                        I'm a full-stack{" "}
                         <span className={styles.inside}>Web3</span> developer
-                        with 2 years of experience in this community. I believe
-                        that <span className={styles.inside}>Blockchain</span>{" "}
-                        technology will lead the future. With my skills, I want
-                        to leave a positive impact on the world.
+                        based in India.
+                        <br />I believe in{" "}
+                        <span className={styles.inside}>Blockchain</span>.
                     </p>
                     <div className={styles.links}>
                         <ShinyButton
@@ -72,38 +111,16 @@ function Hero() {
                         </div>
                     </div>
                 </div>
-                <motion.div
-                    className={styles.imageContainer}
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <motion.img
-                        src={myPic}
-                        alt="My Image"
-                        className={styles.profileImage}
-                        whileHover={{
-                            rotate: 5,
-                            scale: 1.05,
-                            boxShadow: "0 0 20px rgb(64, 224, 125)",
-                        }}
-                    />
-                    <motion.div
-                        className={styles.glowingBorder}
-                        animate={{
-                            boxShadow: [
-                                "0 0 5px rgb(64, 224, 125)",
-                                "0 0 20px rgb(64, 224, 125)",
-                                "0 0 5px rgb(64, 224, 125)",
-                            ],
-                        }}
-                        transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            repeatType: "reverse",
-                        }}
-                    />
-                </motion.div>
+                <div className={styles.model}>
+                    <Canvas>
+                        <ambientLight />
+                        <OrbitControls />
+                        <Suspense fallback={null}>
+                            <Ethereum />
+                        </Suspense>
+                        <Environment preset="sunset" />
+                    </Canvas>
+                </div>
             </div>
         </section>
     )

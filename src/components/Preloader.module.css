@@ -1,0 +1,20 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    z-index: 9999;
+}
+  
+.loadingText {
+    margin-top: 20px;
+    font-size: 50px;
+    font-family: "NeueMontrealThin", sans-serif;
+    color: rgb(237, 238, 242);
+}

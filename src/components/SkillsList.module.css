@@ -1,23 +1,23 @@
 .section {
+    min-height: 100vh;
     overflow: hidden;
     padding-top: 0rem;
     padding-bottom: 5rem;
+    padding-left: 7rem;
 }
 
 .container {
-    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 .heading {
-    font-size: 5rem;
-    font-weight: bold;
+    font-family: "gt-alpina", serif;
+    font-size: 8rem;
+    letter-spacing: 1px;
+    font-weight: 100;
     margin-bottom: 3rem;
-    text-align: center;
-    color: white;
+    text-align: left;
 }
 
 .skillRow {
@@ -25,28 +25,32 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    color: #4a5568; 
     position: relative;
+    color: hsl(0 0% 0% / 30%);
 }
 
 .skillName {
     font-size: 6rem;
-    font-weight: 800;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: -0.02em;
-    transition: color 0.3s;
-    padding-top: 0rem;
-    padding-bottom: 0rem;
+    letter-spacing: 0.01em;
+    margin-left: 1rem ;
+    margin-right: 1rem;
 }
 
+
 @media (max-width: 1024px) {
+    .section {
+        padding-left: 0;
+    }
+
     .container {
         max-width: 600px;
     }
 
     .heading {
-        font-size: 4.3rem;
+        font-size: 5.5rem;
+        text-align: center;
     }
 
     .skillName {
@@ -64,7 +68,7 @@
     }
 
     .heading {
-        font-size: 3.5rem;
+        font-size: 5rem;
     }
 
     .skillName {

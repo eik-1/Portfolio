@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react"
 import { gsap } from "gsap"
+import { motion } from "framer-motion"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+
 import styles from "./SkillsList.module.css"
 
 gsap.registerPlugin(ScrollTrigger)
@@ -43,7 +45,14 @@ const SkillsList = ({ skills }) => {
     return (
         <section ref={componentRef} className={styles.section}>
             <div className={styles.container}>
-                <h2 className={styles.heading}>Techstack</h2>
+                <motion.h1
+                    className={styles.heading}
+                    initial={{ x: 100, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+                    <span>Techstack</span>
+                </motion.h1>
                 {skills.map((skill, index) => (
                     <div
                         key={index}
@@ -57,7 +66,7 @@ const SkillsList = ({ skills }) => {
                                     style={{
                                         color:
                                             i === 7 ? skill.color : "inherit",
-                                        opacity: i === 7 ? 1 : 0.5,
+                                        opacity: i === 7 ? 1 : 0.4,
                                     }}
                                 >
                                     {skill.name}

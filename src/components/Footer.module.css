@@ -9,8 +9,8 @@
 }
 
 .copyright {
-    color: rgb(64, 224, 125);
-    font-family: "Space Mono", monospace;
+    color: #000;
+    font-family: "NeueMontreal", sans-serif;
     font-size: 1.2rem;  
     font-weight: 700;
     text-decoration: none;
@@ -22,9 +22,10 @@
 }
 
 .getInTouchTitle {
-    color: rgb(64, 224, 125);
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    color: #000;
+    font-family: "gt-alpina", cursive;
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
     display: inline-block;
     position: relative;
     padding-bottom: 2px;
@@ -33,11 +34,11 @@
 .getInTouchTitle::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: rgb(64, 224, 125);
+    background-color: #FF0000;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
@@ -51,7 +52,6 @@
 .getInTouchText {
     font-size: 0.9rem;
     margin-bottom: 1rem;
-    color: #cccccc;
 }
 
 .socialLinks {
@@ -61,17 +61,17 @@
 }
 
 .socialLinks a {
-    color: #ffffff;
+    color: #000;
     text-decoration: none;
     font-size: 0.9rem;
 }
 
 .socialLinks a:hover {
-    color: rgb(64, 224, 125);
+    color: #FF0000;
 }
 
 .separator {
-    color: #ffffff;
+    color: #000;
     margin: 0 0.5rem;
     font-size: 0.9rem;
 }

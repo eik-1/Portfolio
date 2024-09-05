@@ -5,4 +5,7 @@ import eslint from "vite-plugin-eslint"
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [react(), eslint()],
+    server: {
+        port: 5173, // Ensure this matches the port in the error message
+    },
 })

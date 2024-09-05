@@ -1,5 +1,4 @@
-import StoX from "./StoX-demo.png"
-import dBeats from "./dBeats-demo.png"
-import TokenIndexer from "./tokenIndexer-demo.png"
+import StoX from "./stox.webp"
+import dBeats from "./dbeats.webp"
 
-export { StoX, dBeats, TokenIndexer }
+export { StoX, dBeats }

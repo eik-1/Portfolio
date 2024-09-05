@@ -12,9 +12,10 @@
 }
 
 .logo {
-  color: #ffffff;
-  font-family: "Space Mono", monospace;
-  font-size: 2.3rem;
+  color: #000;
+  font-family: "NeueMontrealThin", sans-serif;
+  letter-spacing: 3px;
+  font-size: 2.5rem;
   font-weight: 700;
   text-decoration: none;
 }
@@ -26,14 +27,29 @@
 }
 
 .navLink {
+  font-family: NeueMontreal, sans-serif;
   font-size: 1.5rem;
-  text-decoration: none;
-  color: #ffffff;
-  transition: color 0.3s ease;
+  color: #000;
+  transition: color 0.5s ease;
 }
 
 .navLink:hover {
-  color: rgb(64, 224, 125);
+  color: rgb(255, 0, 0);
+}
+
+.resumeButtonMain {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.resumeButtonMain:hover {
+  color: rgb(237, 238, 242);
 }
 
 .transparent {
@@ -44,7 +60,6 @@
   background: inherit;
   backdrop-filter: blur(20px);
   box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  /* background-color: black; */
 }
 
 .mobileMenuToggle {
@@ -58,74 +73,65 @@
 @media only screen and (max-width: 768px) {
   .navbar {
     padding: 0.75rem 2rem;
+    z-index: 1005;
   }
 
   .desktopMenu {
-      display: none;
+    display: none;
   }
 
   .mobileMenuToggle {
-      display: block;
+    display: block;
+    position: relative;
   }
 
-  .mobileMenuToggle button {
-      background: none;
-      border: none;
-      color: rgb(64, 224, 125);
-      cursor: pointer;
-  }
-
-.mobileMenu {
-      display: flex;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: black;
-      z-index: 1001;
-      transform: translateY(-100%);
-      transition: transform 0.3s ease-in-out;
-}
-
-  .mobileMenu.open {
-      transform: translateY(0);
+  .mobileMenu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(237, 238, 242);
+    z-index: 1003;
   }
 
   .mobileMenuContent {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
-      padding: 2rem;
-  }
-
-  .closeButton {
-      position: absolute;
-      top: 1.9rem;
-      right: 2.9rem;
-      background: none;
-      border: none;
-      color: rgb(64, 224, 125);
-      cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
   }
 
   .mobileMenuLinks {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
 
   .mobileNavLink {
-      font-size: 2rem;
-      text-decoration: none;
-      color: #ffffff;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #000;
   }
 
-  .mobileCopy {
-      margin-top: 2rem;
+  .resumeButtonMobile {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    color: #000;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .resumeButtonMobile:hover {
+    color: rgb(237, 238, 242);
   }
 }

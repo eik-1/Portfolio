@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { Menu, X } from "lucide-react"
-import Copy from "./Copy"
+import { AnimatePresence, motion } from "framer-motion"
+
+import HamburgerButton from "./Hamburger"
+import ResumeButton from "./ResumeButton"
 import styles from "./Navbar.module.css"
 
 function Navbar() {
     const [scrolled, setScrolled] = useState(false)
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const [isHovered, setIsHovered] = useState(false)
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setScrolled(true)
-            } else {
-                setScrolled(false)
-            }
+            setScrolled(window.scrollY > 50)
         }
         window.addEventListener("scroll", handleScroll)
         return () => {
@@ -23,15 +22,30 @@ function Navbar() {
     }, [])
 
     useEffect(() => {
-        if (mobileMenuOpen) {
-            document.body.style.overflow = "hidden"
-        } else {
-            document.body.style.overflow = "unset"
-        }
+        document.body.style.overflow = mobileMenuOpen ? "hidden" : "unset"
     }, [mobileMenuOpen])
 
     const toggleMobileMenu = () => {
-        setMobileMenuOpen(!mobileMenuOpen)
+        setMobileMenuOpen((prevState) => !prevState)
+    }
+
+    const menuVariants = {
+        closed: {
+            x: "100%",
+            transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 40,
+            },
+        },
+        open: {
+            x: "0%",
+            transition: {
+                type: "spring",
+                stiffness: 400,
+                damping: 40,
+            },
+        },
     }
 
     return (
@@ -43,55 +57,69 @@ function Navbar() {
             >
                 <div>
                     <Link to="/" className={styles.logo}>
-                        <h1>Eik</h1>
+                        <h1>EIK</h1>
                     </Link>
                 </div>
                 <div className={styles.desktopMenu}>
                     <Link to="/about" className={styles.navLink}>
-                        About
+                        ABOUT
                     </Link>
                     <Link to="/blogs" className={styles.navLink}>
-                        Blogs
+                        BLOGS
                     </Link>
-                    <Copy />
+                    <ResumeButton
+                        href="https://drive.google.com/file/d/1yivpQlXRbVlX28Qpk9_fIm-YERRxlfYc/view?usp=sharing"
+                        buttonStyle={styles.resumeButtonMain}
+                    />
                 </div>
                 <div className={styles.mobileMenuToggle}>
-                    <button onClick={toggleMobileMenu}>
-                        <Menu size={29} />
-                    </button>
+                    <HamburgerButton
+                        isOpen={mobileMenuOpen}
+                        toggleMenu={toggleMobileMenu}
+                    />
                 </div>
             </nav>
-            <div
-                className={`${styles.mobileMenu} ${mobileMenuOpen ? styles.open : ""}`}
-            >
-                <div className={styles.mobileMenuContent}>
-                    <button
-                        className={styles.closeButton}
-                        onClick={toggleMobileMenu}
+            <AnimatePresence>
+                {mobileMenuOpen && (
+                    <motion.div
+                        className={styles.mobileMenu}
+                        initial="closed"
+                        animate="open"
+                        exit="closed"
+                        variants={menuVariants}
                     >
-                        <X size={29} />
-                    </button>
-                    <div className={styles.mobileMenuLinks}>
-                        <Link
-                            to="/about"
-                            className={styles.mobileNavLink}
-                            onClick={toggleMobileMenu}
-                        >
-                            About
-                        </Link>
-                        <Link
-                            to="/blogs"
-                            className={styles.mobileNavLink}
-                            onClick={toggleMobileMenu}
-                        >
-                            Blogs
-                        </Link>
-                        <div className={styles.mobileCopy}>
-                            <Copy />
+                        <div className={styles.mobileMenuContent}>
+                            <div className={styles.mobileMenuLinks}>
+                                <Link
+                                    to="/"
+                                    className={styles.mobileNavLink}
+                                    onClick={toggleMobileMenu}
+                                >
+                                    HOME
+                                </Link>
+                                <Link
+                                    to="/about"
+                                    className={styles.mobileNavLink}
+                                    onClick={toggleMobileMenu}
+                                >
+                                    ABOUT
+                                </Link>
+                                <Link
+                                    to="/blogs"
+                                    className={styles.mobileNavLink}
+                                    onClick={toggleMobileMenu}
+                                >
+                                    BLOGS
+                                </Link>
+                                <ResumeButton
+                                    href="https://drive.google.com/file/d/1yivpQlXRbVlX28Qpk9_fIm-YERRxlfYc/view?usp=sharing"
+                                    buttonStyle={styles.resumeButtonMobile}
+                                />
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </>
     )
 }

@@ -2,17 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/*
+  primary: rgb(237, 238, 242),
+  font: #000
+  secondary: #FF0000
+*/
+
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #000000 10%, #373A40 120%); 
-    background-attachment: fixed;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: "Outfit", sans-serif;
-  }
+    background-color: rgb(237, 238, 242); 
+    color: #000; 
+    font-family: "NeueMontreal", sans-serif;
+    -webkit-font-smoothing: inherit;
+}
   
 #root {
     min-height: 100vh;
+}
+
+@font-face {
+  font-family: "NeueMontrealItalic";
+  src: url(/public/PPNeueMontreal-Italic.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "NeueMontreal";
+  src: url(/public/PPNeueMontreal-Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "NeueMontrealThin";
+  src: url(/public/PPNeueMontreal-Thin.otf) format("opentype"); 
+}
+
+@font-face {
+  font-family: "gt-alpina";
+  src: url(/public/GT-Alpina.ttf) format("truetype");
 }
