@@ -1,19 +1,155 @@
-.tempDiv {
-    height: 100vh;
+.projectPage {
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+    padding: 1rem;
+  }
+  
+.projectHeader {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+  
+.projectImage {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+  
+.projectInfo {
+    width: 50%;
+    margin-top: 1rem;
+}
+  
+.projectTitle {
     font-size: 5rem;
-    text-align: center;
+    margin-bottom: 0.2rem;
+    font-family: "NeueMontrealThin";
+}
+  
+.projectDescription {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: "NeueMontrealThin";
+    font-weight: 800;
+    letter-spacing: 0.1rem;
 }
 
-.temp {
+.divider {
+    border: 0;
+    height: 1px;
+    background-color: hsl(0, 0%, 60%);
+    margin: 20px 0;
+}
+
+.iconList {
+    /* background-color: hsl(0, 0%, 50%); */
+    width: fit-content;
+    border-radius: 50px;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+  
+.buttonContainer {
+    display: flex;
+    gap: 1rem;
+}
+  
+.button {
+    padding: 0.5rem 1rem;
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    letter-spacing: 0.1rem;
+    background-color: hsl(0, 0%, 0%);
+    color: rgb(237, 238, 242);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+  
+.button:hover {
+    background-color: hsl(0, 100%, 50%);
+}
+
+.buttonGithub {
+    padding: 0.5rem 1rem;
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    letter-spacing: 0.1rem;
+    border: 1px solid #000;
+    background-color: transparent;
     color: #000;
-    font-family: "Space Mono", monospace;   
+    text-decoration: none;
+    border-radius: 4px;
+    transition: border 0.3s;
+}
+
+.buttonGithub:hover {
+    border: 1px solid hsl(0, 100%, 50%);
+}
+  
+.projectContent {
+    margin-top: 2rem;
+}
+  
+.paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+.notFound {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 2rem;
 }
 
 @media (max-width: 580px) {
-    .temp {
-        font-size: 3rem;
+    .projectPage {
+      margin-top: 7rem;
+      margin-bottom: 3rem;
     }
-}
+  
+    .projectHeader {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .projectImage {
+      width: 100%;
+    }
+  
+    .projectInfo {
+      width: 100%;
+    }
+  
+    .projectTitle {
+      font-size: 3rem;
+    }
+  
+    .projectDescription {
+      font-size: 1.2rem;
+    }
+  
+    .iconList {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .buttonContainer {
+      flex-direction: column;
+    }
+  
+    .button,
+    .buttonGithub {
+      width: 100%;
+      justify-content: center;
+    }
+  }
