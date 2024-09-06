@@ -114,7 +114,14 @@ function Hero() {
                 <div className={styles.model}>
                     <Canvas>
                         <ambientLight />
-                        <OrbitControls />
+                        <OrbitControls
+                            enableZoom={false}
+                            enablePan={false}
+                            enableRotate={true}
+                            enableDamping={true}
+                            dampingFactor={0.25}
+                            rotateSpeed={0.5}
+                        />
                         <Suspense fallback={null}>
                             <Ethereum />
                         </Suspense>
