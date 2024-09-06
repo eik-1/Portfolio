@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { Twitter, Linkedin, Instagram } from "lucide-react"
+import { Linkedin, Instagram } from "lucide-react"
 import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Environment } from "@react-three/drei"
 import { motion } from "framer-motion"
@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 import ShinyButton from "./magicui/ShinyButton"
 import styles from "./Hero.module.css"
 import Ethereum from "./Ethereum"
-import { medium } from "../assets"
+import { medium, X } from "../assets"
 import { Suspense } from "react"
 
 function Hero() {
@@ -78,7 +78,7 @@ function Hero() {
                                 rel="noopener noreferrer"
                                 className={styles.socialLink}
                             >
-                                <Twitter size={24} />
+                                <img className={styles.xSvg} src={X} alt="X" />
                             </a>
                             <a
                                 href="https://www.linkedin.com/in/sarthakeik1/"

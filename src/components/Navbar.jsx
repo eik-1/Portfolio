@@ -9,7 +9,6 @@ import styles from "./Navbar.module.css"
 function Navbar() {
     const [scrolled, setScrolled] = useState(false)
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-    const [isHovered, setIsHovered] = useState(false)
 
     useEffect(() => {
         const handleScroll = () => {

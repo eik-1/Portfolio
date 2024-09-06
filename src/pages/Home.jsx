@@ -2,7 +2,6 @@ import React from "react"
 
 import Hero from "../components/Hero"
 import Techstack from "../components/Techstack"
-import ArticleSection from "../components/ArticleSection"
 import ProjectsSection from "../components/ProjectsSection"
 
 function Home() {
@@ -11,7 +10,6 @@ function Home() {
             <Hero />
             <Techstack />
             <ProjectsSection />
-            {/* <ArticleSection /> */}
         </div>
     )
 }

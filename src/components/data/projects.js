@@ -1,6 +1,23 @@
-import {} from "lucide-react"
-
+import {
+    SolidityOriginal,
+    JavascriptOriginal,
+    ReactOriginal,
+    HardhatOriginal,
+    NodejsOriginalWordmark,
+    MongodbOriginalWordmark,
+    GraphqlPlain,
+    NextjsPlain,
+    PostgresqlOriginal,
+    TailwindcssOriginal,
+    ExpressOriginal,
+    RustOriginal,
+    RedisOriginal,
+    ReduxOriginal,
+    SupabaseOriginal,
+    TypescriptOriginal,
+} from "devicons-react"
 import { StoX, dBeats } from "../../assets/projects"
+import { Chainlink } from "../../assets"
 
 export const projects = [
     {
@@ -8,17 +25,36 @@ export const projects = [
         title: "Stox",
         des: "Tokenizing Stocks Using Chainlink",
         img: StoX,
-        iconLists: [],
+        iconLists: [
+            SolidityOriginal,
+            Chainlink,
+            JavascriptOriginal,
+            TailwindcssOriginal,
+        ],
         link: "https://stox-tokenize.vercel.app",
         github: "https://github.com/eik-1/stox-foundry-contracts",
+        paragraph1: "",
+        paragraph2: "",
     },
     {
         id: 2,
         title: "D Beats",
         des: "NFT Marketplace For Music",
         img: dBeats,
-        iconLists: [],
+        iconLists: [
+            SolidityOriginal,
+            Chainlink,
+            HardhatOriginal,
+            JavascriptOriginal,
+            ReactOriginal,
+            NodejsOriginalWordmark,
+            MongodbOriginalWordmark,
+            GraphqlPlain,
+            ExpressOriginal,
+        ],
         link: "https://locs-nu.vercel.app",
         github: "https://locs-nu.vercel.app",
+        paragraph1: "",
+        paragraph2: "",
     },
 ]
