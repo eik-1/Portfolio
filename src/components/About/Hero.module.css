@@ -74,11 +74,11 @@
 
 @media (max-width: 580px) {
     .heroSection {
-        height: 100vh;
         flex-direction: column;
         height: auto;
         margin-top: 8rem;
         padding: 0 2rem;
+        margin-bottom: 7rem;
     }
 
     .heroContent {
@@ -87,12 +87,20 @@
     }
 
     .heading {
+        font-size: 1.5rem;
         justify-content: center;
     }
 
     .appleWaving {
         width: 40px;
     }
+
+    .heading {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
 
     .subHeading {
         font-size: 1.5rem;
@@ -113,5 +121,12 @@
 
     .skills li {
         text-align: left;
+    }
+}
+
+@media (max-width: 380px) {
+    .heading {
+        font-size: 1.3rem;
+        justify-content: flex-start;
     }
 }

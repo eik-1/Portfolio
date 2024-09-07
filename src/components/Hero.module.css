@@ -168,6 +168,13 @@
         text-align: center;
     }
 
+    .circle2 {
+        width: 400px;
+        height: 400px;
+        bottom: 50px;
+        right: 80px;
+    }
+
     .introText {
         padding-right: 2rem;
         padding-left: 2rem;
@@ -206,11 +213,18 @@
         padding: 0;
         margin-bottom: 3rem;
     }
+
+    .circle2 {
+        width: 400px;
+        height: 400px;
+        bottom: 350px;
+        right: 80px;
+    }
     
     .name {
         text-align: center;
         font-weight: 600;
-        font-size: 5rem;
+        font-size: 4rem;
         display: flex;
         justify-content: center;
     }
@@ -221,7 +235,7 @@
     }
 
     .nameitalic {
-        font-size: 5rem;
+        font-size: 4rem;
     }
     
     .introduction {
@@ -241,5 +255,23 @@
     .mediumSvg {
         width: 25px;
         height: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    .name {
+        font-size: 3rem;
+    }
+
+    .circle2 {
+        width: 350px;
+        height: 350px;
+        bottom: 200px;
+        right: 80px;
+    }
+
+    .wavingHand {
+        width: 50px;
+        height: 50px;
     }
 }
