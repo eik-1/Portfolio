@@ -8,8 +8,8 @@
 }
 
 .temp {
-    color: rgb(64, 224, 125);
-    font-family: "Space Mono", monospace;   
+    color: #000;
+    font-family: "gt-alpina", cursive;   
 }
 
 @media (max-width: 580px) {

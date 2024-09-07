@@ -53,6 +53,40 @@
     display: flex;
     gap: 1rem;
     margin-bottom: 3rem;
+    position: relative;
+}
+
+.iconWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.iconTooltip {
+  visibility: hidden;
+  background-color: #000;
+  color: rgb(237, 238, 242);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.iconWrapper:hover .iconTooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.chainlinkIcon {
+    width: 24px;
+    height: 24px;
 }
   
 .buttonContainer {

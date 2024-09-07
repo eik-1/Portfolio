@@ -17,7 +17,6 @@ import {
     TypescriptOriginal,
 } from "devicons-react"
 import { StoX, dBeats } from "../../assets/projects"
-import { Chainlink } from "../../assets"
 
 export const projects = [
     {
@@ -26,7 +25,11 @@ export const projects = [
         des: "Tokenizing Stocks Using Chainlink",
         img: StoX,
         img2: "",
-        iconLists: [SolidityOriginal, JavascriptOriginal, TailwindcssOriginal],
+        iconLists: [
+            { Icon: SolidityOriginal, name: "Solidity" },
+            { Icon: JavascriptOriginal, name: "JavaScript" },
+            { Icon: TailwindcssOriginal, name: "Tailwind CSS" },
+        ],
         link: "https://stox-tokenize.vercel.app",
         github: "https://github.com/eik-1/stox-foundry-contracts",
         paragraph1:
@@ -41,14 +44,14 @@ export const projects = [
         img: dBeats,
         img2: "",
         iconLists: [
-            SolidityOriginal,
-            HardhatOriginal,
-            JavascriptOriginal,
-            ReactOriginal,
-            NodejsOriginalWordmark,
-            MongodbOriginalWordmark,
-            GraphqlPlain,
-            ExpressOriginal,
+            { Icon: SolidityOriginal, name: "Solidity" },
+            { Icon: HardhatOriginal, name: "Hardhat" },
+            { Icon: JavascriptOriginal, name: "JavaScript" },
+            { Icon: ReactOriginal, name: "React" },
+            { Icon: NodejsOriginalWordmark, name: "NodeJs" },
+            { Icon: MongodbOriginalWordmark, name: "MongoDB" },
+            { Icon: GraphqlPlain, name: "GraphQL" },
+            { Icon: ExpressOriginal, name: "Express" },
         ],
         link: "https://locs-nu.vercel.app",
         github: "https://locs-nu.vercel.app",

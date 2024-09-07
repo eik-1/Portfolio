@@ -55,7 +55,8 @@ function Hero() {
                             alt="waving"
                         />
                         <h1>
-                            I'm <span className={styles.nameitalic}>Eik</span>
+                            Hi, I'm{" "}
+                            <span className={styles.nameitalic}>Eik</span>
                         </h1>
                     </motion.div>
 
